@@ -71,6 +71,13 @@ namespace ISIP224_Matveeva
                     }
                     Console.WriteLine("Отсортировано");
                 }
+                else if (choice == "4")
+                {
+                    Console.Write("Введите курс (например 90 для USD): ");
+                    double rate = Convert.ToDouble(Console.ReadLine());
+                    for (int i = 0; i < count; i++)
+                        Console.WriteLine($"{names[i]} — {prices[i] / rate}");
+                }
             }
 
             }
