@@ -40,6 +40,17 @@ namespace ISIP224_Matveeva
                     for (int i = 0; i < count; i++)
                         Console.WriteLine($"{names[i]} - {prices[i]} руб.");
                 }
+                else if (choice == "2")
+                {
+                    double sum = 0, min = prices[0], max = prices[0];
+                    for (int i = 0; i < count; i++)
+                    {
+                        sum += prices[i];
+                        if (prices[i] < min) min = prices[i];
+                        if (prices[i] > max) max = prices[i];
+                    }
+                    Console.WriteLine($"Сумма: {sum}, Среднее: {sum / count}, Мин: {min}, Макс: {max}");
+                }
             }
 
             }
