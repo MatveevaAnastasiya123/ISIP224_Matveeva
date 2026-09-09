@@ -51,6 +51,26 @@ namespace ISIP224_Matveeva
                     }
                     Console.WriteLine($"Сумма: {sum}, Среднее: {sum / count}, Мин: {min}, Макс: {max}");
                 }
+                else if (choice == "3")
+                {
+                    for (int i = 0; i < count - 1; i++)
+                    {
+                        for (int j = 0; j < count - i - 1; j++)
+                        {
+                            if (prices[j] > prices[j + 1])
+                            {
+                                double tempP = prices[j];
+                                prices[j] = prices[j + 1];
+                                prices[j + 1] = tempP;
+
+                                string tempN = names[j];
+                                names[j] = names[j + 1];
+                                names[j + 1] = tempN;
+                            }
+                        }
+                    }
+                    Console.WriteLine("Отсортировано");
+                }
             }
 
             }
