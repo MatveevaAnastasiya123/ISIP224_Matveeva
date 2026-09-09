@@ -78,7 +78,17 @@ namespace ISIP224_Matveeva
                     for (int i = 0; i < count; i++)
                         Console.WriteLine($"{names[i]} — {prices[i] / rate}");
                 }
-            }
+                else if (choice == "5")
+                {
+                    Console.Write("Поиск: ");
+                    string q = Console.ReadLine().ToLower();
+                    for (int i = 0; i < count; i++)
+                    {
+                        if (names[i].ToLower().Contains(q))
+                            Console.WriteLine($"{names[i]} — {prices[i]} руб.");
+                    }
+                }
+                }
 
             }
         }
